@@ -11,14 +11,3 @@ github_username:
 # Build settings
 markdown: kramdown
 
-default:
-  -
-  scope:
-    path: ""
-    type: "members"
-  values:
-    _options:
-      image_path:
-        width: 440
-        height: 440
-        uploads_dir: "/images/members"
