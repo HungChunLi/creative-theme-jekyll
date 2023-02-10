@@ -37,13 +37,19 @@
                     <p class="text-muted">You have to make your websites with love these days!</p>
                 </div>
             </div>
-            {% for member in site.members %}
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <ul class="staff">
+                {% for member in site.members %}
                 <li>
                     <div class="square-image" style="background-image: url({% include relative-src.html src=member.image_path %})"></div>
                     <div class="name"><a target="_blank" href="https://twitter.com/{{ member.english_name }}">{{ member.english_name }}</a></div>
                     <div class="position">{{ member.position }}</div>
                 </li>
-            {% endfor %}
+                {% endfor %}
+            </ul>
         </div>
     </div>
 </section>
