@@ -1,8 +1,8 @@
-<section id="services">
+<section id="members">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading">At Your Service</h2>
+                <h2 class="section-heading">Members</h2>
                 <hr class="primary">
             </div>
         </div>
@@ -37,6 +37,13 @@
                     <p class="text-muted">You have to make your websites with love these days!</p>
                 </div>
             </div>
+            {% for member in site.members %}
+                <li>
+                    <div class="square-image" style="background-image: url({% include relative-src.html src=person.image_path %})"></div>
+                    <div class="name"><a target="_blank" href="https://twitter.com/{{ person.twitter_username }}">{{ person.english_name }}</a></div>
+                    <div class="position">{{ person.position }}</div>
+                </li>
+            {% endfor %}
         </div>
     </div>
 </section>
